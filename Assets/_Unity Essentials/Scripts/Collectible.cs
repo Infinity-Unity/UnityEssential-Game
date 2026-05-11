@@ -6,7 +6,6 @@ public class Collectible : MonoBehaviour
 {
     public GameObject onCollectEffect;
     public float rotationSpeed = 0.5f;
-    public int score = 0;
 
     void Start()
     {
@@ -25,10 +24,15 @@ public class Collectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //Destriy the collectible
+            
+            StarController.Instance.RemoveStar(gameObject);
+
+            StarController.Instance.PlayStarCollectSound();
+
             Destroy(gameObject);
 
-            //add player score
-            score++;
+            
+           
 
             //Instantiate the particle effect
             Instantiate(onCollectEffect, transform.position, transform.rotation);

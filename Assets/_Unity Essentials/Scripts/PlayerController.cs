@@ -21,6 +21,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
         }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            Debug.Log(transform.rotation.y);
+            transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0,transform.eulerAngles.y,0));
+        }
     }
 
 

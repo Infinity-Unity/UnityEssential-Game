@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Crate
   - Dirt
+  - Star
   layers:
   - Default
   - TransparentFX

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3926995519691008072}
   - component: {fileID: 4270279630675246607}
   - component: {fileID: 9005057236000043293}
+  - component: {fileID: 838232460533213883}
   m_Layer: 0
   m_Name: Collectible_Star
-  m_TagString: Untagged
+  m_TagString: Star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,6 +72,18 @@ MonoBehaviour:
     type: 3}
   rotationSpeed: 0.5
   score: 0
+--- !u!114 &838232460533213883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720867298404714495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca6d91a237e7e094c96ce25fa54f5a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8321453150816668697
 GameObject:
   m_ObjectHideFlags: 0

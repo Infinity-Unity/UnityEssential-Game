@@ -12,7 +12,7 @@ public class BallTeleport : MonoBehaviour
         ball = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         pos = transform.position;
-        Debug.Log($"Начальная позиция шара: {pos}.");
+        /*Debug.Log($"Начальная позиция шара: {pos}.");*/
     }
 
     
@@ -23,11 +23,11 @@ public class BallTeleport : MonoBehaviour
             transform.position = pos;
             rb.velocity = new Vector3(0f, 0f, 0f);            
         }
-        Debug.Log($"Текущая позиция шара: {pos}.");
+        /*Debug.Log($"Текущая позиция шара: {pos}.");
         Debug.Log($"Скорость шара(вектор): {rb.velocity}");
-        Debug.Log($"Скорость шара(число): {rb.velocity.magnitude}");
+        Debug.Log($"Скорость шара(число): {rb.velocity.magnitude}");*/
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.velocity += new Vector3(0f,0f,0.1f);
         }
