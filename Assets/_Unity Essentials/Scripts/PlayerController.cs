@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Controls player movement and rotation.
 public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f; 
@@ -17,14 +16,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
-        }
+        
 
         if (Input.GetKey(KeyCode.R))
         {
-            Debug.Log(transform.rotation.y);
             transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0,transform.eulerAngles.y,0));
         }
     }
@@ -40,5 +35,10 @@ public class PlayerController : MonoBehaviour
         float turn = Input.GetAxis("Horizontal") * rotationSpeed * Time.fixedDeltaTime;
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+        }
     }
 }

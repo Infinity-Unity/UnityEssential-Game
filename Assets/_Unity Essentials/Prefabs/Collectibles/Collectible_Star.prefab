@@ -70,8 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onCollectEffect: {fileID: 9163842254569548763, guid: 919783951ffab4c9ea8860c54de9543c,
     type: 3}
-  rotationSpeed: 0.5
-  score: 0
+  rotationSpeed: 120
 --- !u!114 &838232460533213883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,13 +109,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8321453150816668697}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6995733, y: -0.10294341, z: 0.10294343, w: 0.69957316}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0.00033068657, y: -0.0022458434, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3926995519691008072}
-  m_LocalEulerAnglesHint: {x: -106.742, y: 90, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
 --- !u!33 &4809902073893187351
 MeshFilter:
   m_ObjectHideFlags: 0

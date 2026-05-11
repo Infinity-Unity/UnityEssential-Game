@@ -25,11 +25,6 @@ public class StarController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void RegisterStar(GameObject star)
     {
         stars.Add(star);

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class PlaySoundOnCollision : MonoBehaviour
 {
-     private AudioSource audioSource;
-    [SerializeField] private AudioClip ballSound;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip sound;
 
-    void Start()
+    void Awake()
     {
         audioSource = GetComponent<AudioSource>();
     }
@@ -15,6 +15,6 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        audioSource.PlayOneShot(ballSound);
+        audioSource.PlayOneShot(sound);
     }
 }

@@ -5,16 +5,14 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     public GameObject onCollectEffect;
-    public float rotationSpeed = 0.5f;
+    public float rotationSpeed = 120f;
 
-    void Start()
-    {
-        
-    }
 
-    void Update()
+  
+    private void FixedUpdate()
     {
-        transform.Rotate(0f, rotationSpeed, 0f);
+        transform.Rotate(0f, rotationSpeed * Time.fixedDeltaTime, 0f);
+
     }
 
 
@@ -23,7 +21,7 @@ public class Collectible : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
-            //Destriy the collectible
+            //Destroy the collectible
             
             StarController.Instance.RemoveStar(gameObject);
 

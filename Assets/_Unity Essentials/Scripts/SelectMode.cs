@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,66 +10,52 @@ public class SelectMode : MonoBehaviour
     [SerializeField] private Button closeOpenMenuButton;
 
     [SerializeField] private GameObject selectPanel;
-    [SerializeField] private GameObject rooms;
+    [SerializeField] private GameObject roomsHouse;
     [SerializeField] private GameObject gallery;
     [SerializeField] private GameObject other;
 
     [SerializeField] private GameObject player;
+
+    private GameObject currentRoom;
     
 
 
     void Start()
-    {
-        
-        roomsButton.onClick.AddListener(TurnRoomsPrefab);
-        galleryButton.onClick.AddListener(TurnGalleryPrefab);
-        otherButton.onClick.AddListener(TurnOtherPrefab);
+    {    
+        roomsButton.onClick.AddListener(() => ShowRoom(roomsHouse));
+        galleryButton.onClick.AddListener(() => ShowRoom(gallery));
+        otherButton.onClick.AddListener(() => ShowRoom(other));
         closeOpenMenuButton.onClick.AddListener(OpenClosePanel);
     }
 
-    void Update()
-    {
-        
-    }
+    
 
-    private void TurnRoomsPrefab()
-    {
-        player.SetActive(true);
-        selectPanel.SetActive(false);
-        rooms.SetActive(true);
-        gallery.SetActive(false);
-        other.SetActive(false);
-    }
-
-    private void TurnGalleryPrefab()
-    {
-        player.SetActive(false);
-
-        selectPanel.SetActive(false);
-        rooms.SetActive(false);
-        gallery.SetActive(true);
-        other.SetActive(false);
-    }
-
-    private void TurnOtherPrefab()
-    {
-        player.SetActive(false);
-        selectPanel.SetActive(false);
-        rooms.SetActive(false);
-        gallery.SetActive(false);
-        other.SetActive(true);
-    }
 
     private void OpenClosePanel()
     {
-        if (selectPanel.activeSelf)
+        selectPanel.SetActive(!selectPanel.activeSelf);
+    }
+
+    private void ShowRoom(GameObject room)
+    {
+        if (room == null) return;
+        if(currentRoom == room) return;
+
+        if(currentRoom != null)
         {
-            selectPanel.SetActive (false);
+            currentRoom.SetActive(false);
         }
-        else
-        {
-            selectPanel.SetActive (true);
-        }
+
+        if(room == roomsHouse) player.SetActive(true);
+        else player.SetActive(false);
+
+        room.SetActive(true);
+        selectPanel.SetActive(false);
+        currentRoom = room;
+
+        
+
+
     }
 
 }
