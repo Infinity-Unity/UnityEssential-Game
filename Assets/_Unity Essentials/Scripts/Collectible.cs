@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public GameObject onCollectEffect;
+    [SerializeField] private GameObject onCollectEffect;
     public float rotationSpeed = 120f;
 
 

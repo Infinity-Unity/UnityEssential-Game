@@ -15,7 +15,7 @@ public class BallTeleport : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) { 
+        if (Input.GetKey(KeyCode.G)) { 
             
             transform.position = pos;
             rb.velocity = Vector3.zero;            

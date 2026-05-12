@@ -59,5 +59,6 @@ public class StarController : MonoBehaviour
         audioSource.PlayOneShot(starCollectSound);
     }
 
+    public int GetStarCount() => stars.Count;
     
 }

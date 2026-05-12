@@ -3,9 +3,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f; 
-    public float jumpForce = 5.0f; 
-    public float rotationSpeed = 120.0f; 
+    [SerializeField] float speed = 5.0f;
+    [SerializeField] float jumpForce = 5.0f;
+    [SerializeField] float rotationSpeed = 120.0f;
+
+    [SerializeField] private GameObject onWinEffect;
+    [SerializeField] private Camera camera;
 
     private Rigidbody rb; 
 
@@ -22,6 +25,20 @@ public class PlayerController : MonoBehaviour
         {
             transform.SetPositionAndRotation(transform.position, Quaternion.Euler(0,transform.eulerAngles.y,0));
         }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
+        }
+        if(StarController.Instance != null && StarController.Instance.GetStarCount() == 0)
+        {
+            Instantiate(onWinEffect, transform.position, transform.rotation);
+        }
+
+        if (Input.GetKey(KeyCode.B))
+        {
+            Instantiate(onWinEffect, camera.transform.position, camera.transform.rotation);
+        }
     }
 
 
@@ -36,9 +53,6 @@ public class PlayerController : MonoBehaviour
         Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
         rb.MoveRotation(rb.rotation * turnRotation);
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
-        }
+        
     }
 }
