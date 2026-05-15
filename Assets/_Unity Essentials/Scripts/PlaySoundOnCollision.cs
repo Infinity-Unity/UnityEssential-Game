@@ -9,7 +9,7 @@ public class PlaySoundOnCollision : MonoBehaviour
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponentInParent<AudioSource>();
     }
 
 

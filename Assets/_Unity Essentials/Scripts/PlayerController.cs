@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 5.0f;
     [SerializeField] float rotationSpeed = 120.0f;
 
-    [SerializeField] private GameObject onWinEffect;
-    [SerializeField] private Camera camera;
+   
+    [SerializeField] private ParticleSystem onWinEffect;
+    bool isPlayWinEffect = false;
+    //[SerializeField] private Camera camera;
 
     private Rigidbody rb; 
 
@@ -30,14 +32,12 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(transform.up * jumpForce, ForceMode.VelocityChange);
         }
-        if(StarController.Instance != null && StarController.Instance.GetStarCount() == 0)
-        {
-            Instantiate(onWinEffect, transform.position, transform.rotation);
-        }
+        
 
-        if (Input.GetKey(KeyCode.B))
+        if ((StarController.Instance?.GetStarCount() == 0 && !isPlayWinEffect) || Input.GetKeyDown(KeyCode.B))
         {
-            Instantiate(onWinEffect, camera.transform.position, camera.transform.rotation);
+            onWinEffect.Play();
+            isPlayWinEffect = true;
         }
     }
 
