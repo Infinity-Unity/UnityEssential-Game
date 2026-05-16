@@ -1,7 +1,3 @@
-<img width="1920" height="1080" alt="Screenshot (192)" src="https://github.com/user-attachments/assets/e6670c72-745f-4de6-9074-68bd7908c43d" /><img width="1920" height="1080" alt="изображение" src="https://github.com/user-attachments/assets/48fe2930-8ea7-401f-8306-3fe8732158d8" />Вот более профессионально оформленный `README.md`, с акцентом на то, что это твой **первый проект** и чему именно ты научился:
-
----
-
 # 🎮 Unity Essential Game
 
 > Первый учебный проект, разработанный в рамках курса **Unity Learn – Unity Essentials**
@@ -95,9 +91,8 @@
 ---
 
 ## 📷 Screenshots
-<img width="1920" height="1080" alt="Screenshot (187)" src="https://github.com/user-attachments/assets/05137e54-5181-489c-8917-4c29925a6865" />
-<img width="1920" height="1080" alt="Screenshot (188)" src="https://github.com/user-attachments/assets/810e47a6-10ed-41df-840b-5840572f1304" />
-<img width="1920" height="1080" alt="Screenshot (197)" src="https://github.com/user-attachments/assets/0c0e7019-fd14-41b2-b94e-00817c5dd940" />
+![Uploading Screenshot (193).png…]()
+
 
 
 
