@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         }
         
 
-        if ((StarController.Instance?.GetStarCount() == 0 && !isPlayWinEffect) || Input.GetKeyDown(KeyCode.B))
+        if ((StarController.Instance?.GetStarCount() == 0 && !isPlayWinEffect))
         {
             onWinEffect.Play();
             isPlayWinEffect = true;

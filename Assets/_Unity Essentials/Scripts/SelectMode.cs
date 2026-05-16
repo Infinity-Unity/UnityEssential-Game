@@ -12,7 +12,7 @@ public class SelectMode : MonoBehaviour
     [SerializeField] private GameObject selectPanel;
     [SerializeField] private GameObject roomsHouse;
     [SerializeField] private GameObject gallery;
-    [SerializeField] private GameObject other;
+    //[SerializeField] private GameObject other; // когда нибудь что то добавлю
 
     [SerializeField] private GameObject player;
 
@@ -24,7 +24,7 @@ public class SelectMode : MonoBehaviour
     {    
         roomsButton.onClick.AddListener(() => ShowRoom(roomsHouse));
         galleryButton.onClick.AddListener(() => ShowRoom(gallery));
-        otherButton.onClick.AddListener(() => ShowRoom(other));
+        //otherButton.onClick.AddListener(() => ShowRoom(other));
         closeOpenMenuButton.onClick.AddListener(OpenClosePanel);
     }
 
