@@ -1,3 +1,7 @@
+Это временный readme файл. Скоро будет глобальный DUNGEON UPDATE,в котором исправлю все баги.
+Коротко WASD - control, space - jump, R-reset rotation car, G- reset position ball.
+
+
 # 🎮 Unity Essential Game
 
 > Первый учебный проект, разработанный в рамках курса **Unity Learn – Unity Essentials**
@@ -91,9 +95,16 @@
 ---
 
 ## 📷 Screenshots
-![Uploading Screenshot (193).png…]()
 
-
+<img width="1920" height="1080" alt="Screenshot (188)" src="https://github.com/user-attachments/assets/fe5c27b9-cdf2-458f-a356-97a8af4e19b4" /><img width="1920" height="1080" alt="Screenshot (197)" src="https://github.com/user-attachments/assets/d498bb22-135e-4b53-b33b-d6feae050209" />
+<img width="1920" height="1080" alt="Screenshot (196)" src="https://github.com/user-attachments/assets/42364c88-30da-4534-8cde-1c3e0c304220" />
+<img width="1920" height="1080" alt="Screenshot (195)" src="https://github.com/user-attachments/assets/cfb07434-7f2d-4d4a-8965-5f46ac8a7ad3" />
+<img width="1920" height="1080" alt="Screenshot (194)" src="https://github.com/user-attachments/assets/8b1c7b66-a454-496a-b823-4d316aaaeb5b" />
+<img width="1920" height="1080" alt="Screenshot (193)" src="https://github.com/user-attachments/assets/3c2de8dc-bfa7-4015-a306-b1d1f184a72c" />
+<img width="1920" height="1080" alt="Screenshot (192)" src="https://github.com/user-attachments/assets/dd9f0202-20a3-4766-ba44-80fcaf2418c7" />
+<img width="1920" height="1080" alt="Screenshot (191)" src="https://github.com/user-attachments/assets/b7ce1b35-ae6c-4d9d-9113-2dabdf7df7b5" />
+<img width="1920" height="1080" alt="Screenshot (190)" src="https://github.com/user-attachments/assets/4b6bcf58-08f1-4887-b4b1-25dd53cccbc7" />
+<img width="1920" height="1080" alt="Screenshot (189)" src="https://github.com/user-attachments/assets/ea8fcfea-3324-4931-a1c4-26f893f182d6" />
 
 
 
